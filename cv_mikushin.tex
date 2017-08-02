@@ -23,7 +23,7 @@
 %\mobile{+19083420880}
 \email{dmitry@parallel-computing.pro}
 \extrainfo{skype: maemarcus}
-\photo[72pt]{picture.jpg}
+\photo[72pt]{photo}
 
 \AfterPreamble{\hypersetup{colorlinks,urlcolor=blue}}
 
@@ -31,21 +31,20 @@
 \maketitle
 
 \section{Academic experience}
-\cventry{2015--present}{Research Associate}{University of Zurich}{Institut f\"{u}r Banking und Finance}{Switzerland}{\footnotesize HPC/GPU programming \& optimization for high-dimensional dynamic stochastic economic models.}
+\cventry{2017--present}{Lead Technical Expert}{Luxoft Inc.}{}{Moscow}{\footnotesize 
+GPGPU for high-performance Monte-Carlo backpricing valuation (external customer)}
+\cventry{2015--present}{Research Associate}{University of Zurich}{Institut f\"{u}r Banking und Finance}{Switzerland}{\footnotesize 
+Group of Dr. Simon Scheidegger. Computing global solutions to annually calibrated dynamic stochastic general equilibrium models for policy analysis (overlapping generation models or OLG). Given prototypes from economists within the group, developing production code for large hybrid computing systems equipped with NVIDIA or Intel accelerators (CSCS/Piz Daint, NERSC/Cori). Fine-tuning of value function interpolation kernels on a sparse grid with linear or polynomial basis (AVX, CUDA, Intel Thread Building Blocks). Co-authored a journal paper.}
 \vskip 2pt
-\cventry{2012--present}{Doctoral Assistant}{University of Lugano}{Switzerland}{}{\footnotesize Assisting education and research activities lead by Prof. Olaf Schenk.}
+\cventry{2012--2016}{Doctoral Assistant}{University of Lugano}{Switzerland}{}{\footnotesize Group of Prof. Olaf Schenk. Assisting education and research activities. Worked on manual optimization and designed tools for automatic optimization of stencil codes in seismic and weather prediiction models (CUDA, OpenACC). Main author for a conference paper.}
 \vskip 2pt
-\cventry{2013}{Visiting Scholar}{Rutgers University}{New Jersey, US}{}{\footnotesize Joint research activities with Prof. Eddy Zheng Zhang. Analyzed the efficiency of atomics on different families of NVIDIA GPUs. Tuned GPU kernels optimizations in KernelGen compiler.}
+\cventry{2013}{Visiting Scholar}{Rutgers University}{New Jersey, US}{}{\footnotesize Group of Prof. Eddy Zheng Zhang. Analyzed the efficiency of atomics on different families of NVIDIA GPUs. Tuned GPU kernels optimizations in KernelGen compiler.}
 \vskip 2pt
-\cventry{2011--2012}{Book editor}{}{}{}{\footnotesize Parallel computing on GPU. Architecture and CUDA programming model (in Russian). Alexey Boreskov, Alexander Kharlamov, Nikolay Markovskiy, Dmitry Mikushin, Evgeny Mortikov, Alexander Myltsev, Nikolai Sakharnykh, Vladimir Frolov. MSU Publishing (June 2012).}
-\vskip 2pt
-\cventry{2009--2010}{Lecturer}{GPU Programming Course \& HPC Summer School}{Lomonosov Moscow State University}{}{\footnotesize Presented lectures and hands-ons on integrating CUDA with MPI and multi-threading, and on debugging CUDA applications.}
-\vskip 2pt
-\cventry{2008--2011}{Junior scientist}{Supercomputer simulation laboratory for climate modeling, Research Computing Center}{Lomonosov Moscow State University, Russia}{}{{\footnotesize Numerical and performance evaluation of various mesoscale and regional models. Experimented with deploying key model dynamics blocks on CellBE and GPUs.}}
+\cventry{2008--2011}{Junior scientist}{Supercomputer simulation laboratory for climate modeling, Research Computing Center}{Lomonosov Moscow State University, Russia}{}{{\footnotesize Numerical and performance evaluation of various mesoscale and regional models. Experimented with porting key model dynamics blocks on Cell Broadband Engine and GPU architectures.}}
 \vskip 2pt
 \cventry{2006--2007}{Contractor}{Global Energy Problems Lab}{Moscow Energy Institute}{}{\footnotesize Implemented toolbox for Voronoi tesselation and regression analysis in C\#.}
 
-\section{Professional experience}
+\section{Industrial experience}
 \cventry{2014--present}{Owner}{Applied Parallel Computing LLC (CUDA Education \& Research in EMEA)}{}{\url{http://parallel-computing.pro/}}{}
 \cventry{2011--present}{Project lead}{{KernelGen} open-source compiler toolchain}{\url{http://kernelgen.org/}}{}{\footnotesize Design and development of LLVM-based compiler for identifying parallel loops in C/Fortran code and converting them into GPU kernels. Strategic planning, interacting with community, creating new partnerships.}{}
 \vskip 2pt
@@ -77,9 +76,31 @@
 \cvline{}{\footnotesize Implemented and analyzed Smolarkiewicz transport scheme, the positive-definite method of Lax–Wendroff class. Resulting source code was incorporated into regional non-hydrostatic model of atmosphere and boundary layer (NH3D) and used to trace passive aerosol. Experiments with real terrains showed significant numerical accuracy improvement both in mass conservation and approximation order over leapfrog and first order transport schemes.}
 
 % Publications from a BibTeX file
-\nocite{*}
-\bibliographystyle{plainyr-rev}
-\bibliography{publications}
+\begin{thebibliography}{1}
+
+\bibitem{brumm2015scalable}
+Johannes Brumm, Dmitry Mikushin, Simon Scheidegger, and Olaf Schenk.
+\newblock Scalable high-dimensional dynamic stochastic economic modeling.
+\newblock {\em Journal of Computational Science}, 11:12--25, 2015.
+
+\bibitem{Mikushin:2014:KDI:2672598.2672916}
+Dmitry Mikushin, Nikolay Likhogrud, Eddy~Z. Zhang, and Christopher
+  Bergstr\"{o}m.
+\newblock Kernelgen -- the design and implementation of a next generation
+  compiler platform for accelerating numerical models on gpus.
+\newblock In {\em Proceedings of the 2014 IEEE International Parallel \&
+  Distributed Processing Symposium Workshops}, IPDPSW '14, pages 1011--1020,
+  Washington, DC, USA, 2014. IEEE Computer Society.
+
+\bibitem{PPAM}
+Dmitry Mikushin and Victor Stepanenko.
+\newblock The implementation of regional atmospheric model numerical algorithms
+  for {Cell} {Broadband} {Engine} {Architecture} -based clusters.
+\newblock In Roman Wyrzykowski, Jack Dongarra, Konrad Karczewski, and Jerzy
+  Wasniewski, editors, {\em PPAM (1)}, volume 6067 of {\em Lecture Notes in
+  Computer Science}, pages 525--534. Springer, 2009.
+
+\end{thebibliography}
 
 \section{Selected talks}
 {\small

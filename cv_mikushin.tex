@@ -18,10 +18,13 @@
 \AtBeginDocument{\recomputelengths} % required when changes are made to page layout lengths
 \firstname{Dmitry}
 \familyname{Mikushin}
-\address{via Pelloni 2}{6900 Lugano}
-\mobile{+4178-925-9090}
+%\address{via Pelloni 2}{6900 Lugano}
+%\mobile{+4178-925-9090}
 %\mobile{+19083420880}
+\address{Moscow Region}{142290 Puschino}
+\mobile{+79260570677}
 \email{dmitry@parallel-computing.pro}
+%\email{dmikushin@luxoft.com}
 \extrainfo{skype: maemarcus}
 \photo[72pt]{photo}
 
@@ -31,8 +34,6 @@
 \maketitle
 
 \section{Academic experience}
-\cventry{2017--present}{Lead Technical Expert}{Luxoft Inc.}{}{Moscow}{\footnotesize 
-GPGPU for high-performance Monte-Carlo backpricing valuation (external customer)}
 \cventry{2015--present}{Research Associate}{University of Zurich}{Institut f\"{u}r Banking und Finance}{Switzerland}{\footnotesize 
 Group of Dr. Simon Scheidegger. Computing global solutions to annually calibrated dynamic stochastic general equilibrium models for policy analysis (overlapping generation models or OLG). Given prototypes from economists within the group, developing production code for large hybrid computing systems equipped with NVIDIA or Intel accelerators (CSCS/Piz Daint, NERSC/Cori). Fine-tuning of value function interpolation kernels on a sparse grid with linear or polynomial basis (AVX, CUDA, Intel Thread Building Blocks). Co-authored a journal paper.}
 \vskip 2pt
@@ -45,6 +46,10 @@ Group of Dr. Simon Scheidegger. Computing global solutions to annually calibrate
 \cventry{2006--2007}{Contractor}{Global Energy Problems Lab}{Moscow Energy Institute}{}{\footnotesize Implemented toolbox for Voronoi tesselation and regression analysis in C\#.}
 
 \section{Industrial experience}
+\cventry{2018--present}{System Analyst (part time)}{REG.RU}{}{Moscow}{\footnotesize 
+Overseeing the development of Cloud GPU services for scientific and industrial machine learning. Helping with internal GPU-based spin-off products.}
+\cventry{2017--present}{Lead Technical Expert}{Luxoft Inc.}{}{Moscow}{\footnotesize 
+GPGPU for high-performance Monte-Carlo backpricing valuation (financial customer). Complete rewrite of Scala code into C++ \& CUDA, skip-ahead optimizations for Sobol RNG. Design and implementation of efficient GPU kernels for lidar simulation (automotive customer).}
 \cventry{2014--present}{Owner}{Applied Parallel Computing LLC (CUDA Education \& Research in EMEA)}{}{\url{http://parallel-computing.pro/}}{}
 \cventry{2011--present}{Project lead}{{KernelGen} open-source compiler toolchain}{\url{http://kernelgen.org/}}{}{\footnotesize Design and development of LLVM-based compiler for identifying parallel loops in C/Fortran code and converting them into GPU kernels. Strategic planning, interacting with community, creating new partnerships.}{}
 \vskip 2pt
@@ -109,6 +114,7 @@ Dmitry Mikushin and Victor Stepanenko.
 \section{Active skills}
 \cventry{CS/Research}{\small Explore new environments/software and teach others to use them, design \& perform experiments to analyse hardware/software properties and generalize findings into practically useful methods/tools}{}{}{}{}
 \cventry{HPC/Engineer}{\small Fluency in full development \& support cycle of HPC applications for Linux clusters: programming, parallelization for different architectures, debugging, profiling}{}{}{}{}
+\cventry{Bitcoin mining}{\small Basic understanding of SHA256 and Zero-knowledge proof. Optimization of Equihash miner for NVIDIA GPUs. Available on \href{https://github.com/dmikushin/nheqminer}{GitHub}}{}{}{}{}
 \cventry{Compilers Dev}{\small Basic knowledge of compilers internal structure, contributions to LLVM. Designed and developed {KernelGen} -- a prototype of auto-parallelizing Fortran/C compiler for NVIDIA GPUs, targeting numerical modelling code}{}{}{}{}
 \cventry{GPU low-level}{\small Experience with NVIDIA GPU binary format and Fermi/Kepler assembler, profiling \& optimization}{}{}{}{}
 \cventry{Numericals}{\small Practical experience with linear solvers, PDEs and related cache-aware optimizations}{}{}{}{}

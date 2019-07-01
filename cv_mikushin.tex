@@ -22,12 +22,13 @@
 %\mobile{+4178-925-9090}
 %\mobile{+19083420880}
 %\address{Moscow Region}{142290 Puschino}
-\address{121609 Moscow}{Russia}
-\mobile{+79260570677, +41789259090}
+\address{1008 Prilly}{Switzerland}
 \email{dmitry@parallel-computing.pro}
 %\email{dmikushin@luxoft.com}
-\extrainfo{skype: maemarcus}
-\photo[72pt]{picture}
+\mobile{+41789259090}
+%\mobile{+79260570677, +41789259090}
+\extrainfo{GitHub: \href{http://github.com/dmikushin}{dmikushin}, \href{http://github.com/apc-llc}{APC LLC}}
+\photo[72pt]{old/photo}
 
 \AfterPreamble{\hypersetup{colorlinks,urlcolor=blue}}
 
@@ -35,10 +36,12 @@
 \maketitle
 
 \section{Academic experience}
+\cventry{2019--present}{Doctoral Assistant}{University of Lausanne}{Switzerland}{}{\footnotesize Group of Prof. Simon Scheidegger. R\&D for computational finance and advanced data analytics (Machine Learning, Gaussian processes). Development of high-dimensional optimization and classification frameworks as GPU-backed cloud services (C++, Fortran, CUDA, Python).}
+\vskip 2pt
 \cventry{2015--2019}{Research Associate}{University of Zurich}{Institut f\"{u}r Banking und Finance}{Switzerland}{\footnotesize 
 Group of Dr. Simon Scheidegger. Computing global solutions to annually calibrated dynamic stochastic general equilibrium models for policy analysis (overlapping generation models or OLG). Given prototypes from economists within the group, developing production code for large hybrid computing systems equipped with NVIDIA or Intel accelerators (CSCS/Piz Daint, NERSC/Cori). Fine-tuning of value function interpolation kernels on a sparse grid with linear or polynomial basis (AVX, CUDA, Intel Thread Building Blocks). Co-authored a journal paper.}
 \vskip 2pt
-\cventry{2012--2015}{Doctoral Assistant}{University of Lugano}{Switzerland}{}{\footnotesize Group of Prof. Olaf Schenk. Assisting education and research activities. Worked on manual optimization and designed tools for automatic optimization of stencil codes in seismic and weather prediiction models (CUDA, OpenACC). Main author for a conference paper.}
+\cventry{2012--2015}{Doctoral Assistant}{University of Lugano}{Switzerland}{}{\footnotesize Group of Prof. Olaf Schenk. Assisting education and research activities. Worked on manual optimization and designed tools for automatic optimization of stencil codes in seismic and weather prediction models (CUDA, OpenACC). Main author for a conference paper.}
 \vskip 2pt
 \cventry{2013}{Visiting Scholar}{Rutgers University}{New Jersey, US}{}{\footnotesize Group of Prof. Eddy Zheng Zhang. Analyzed the efficiency of atomics on different families of NVIDIA GPUs. Tuned GPU kernels optimizations in KernelGen compiler.}
 \vskip 2pt
@@ -49,10 +52,12 @@ Group of Dr. Simon Scheidegger. Computing global solutions to annually calibrate
 \section{Industrial experience}
 \cventry{2018--present}{System Analyst (part time)}{REG.RU}{}{Moscow}{\footnotesize 
 Overseeing the development of Cloud GPU services for scientific and industrial machine learning. Helping with internal GPU-based spin-off products.}
-\cventry{2017--present}{Lead Technical Expert}{Luxoft Inc.}{}{Moscow}{\footnotesize 
+\cventry{2019--present}{Support engineer (part time)}{Luxoft Inc.}{}{Moscow}{\footnotesize 
+Emergency \& technical support for previously developed backpricing service (financial customer).}
+\cventry{2017--2019}{Lead Technical Expert}{Luxoft Inc.}{}{Moscow}{\footnotesize 
 GPGPU for high-performance Monte-Carlo backpricing valuation (financial customer). Complete rewrite of Scala code into C++ \& CUDA, skip-ahead optimizations for Sobol RNG. Design and implementation of efficient GPU kernels for lidar simulation (automotive customer).}
 \cventry{2014--present}{Owner}{Applied Parallel Computing LLC (CUDA Education \& Research in EMEA)}{}{\url{http://parallel-computing.pro/}}{}
-\cventry{2011--present}{Project lead}{{KernelGen} open-source compiler toolchain}{\url{http://kernelgen.org/}}{}{\footnotesize Design and development of LLVM-based compiler for identifying parallel loops in C/Fortran code and converting them into GPU kernels. Strategic planning, interacting with community, creating new partnerships.}{}
+%\cventry{2011--present}{Project lead}{{KernelGen} open-source compiler toolchain}{\url{http://kernelgen.org/}}{}{\footnotesize Design and development of LLVM-based compiler for identifying parallel loops in C/Fortran code and converting them into GPU kernels. Strategic planning, interacting with community, creating new partnerships.}{}
 \vskip 2pt
 \cventry{2011--2012}{CTO}{Applied Parallel Computing LLC (CUDA Education \& Research in EMEA)}{Dubna, Moscow Region, Russia}{\url{http://parallel-computing.pro/}}{\footnotesize Managing technological aspects in company's GPGPU training and software development business. Created course list on comprehensive CUDA training program, implemented original presentations and hands-ons, later used in CUDA 4.x Handbook in Russian. Served as trainer on events in Germany, Ireland and Russia. Organizing and reviewing work of 7 company's contracted trainers/developers. Responsible for interaction with customers and partners worldwide.}
 \vskip 2pt
@@ -113,7 +118,7 @@ Dmitry Mikushin and Victor Stepanenko.
 
 \section{Selected talks}
 {\small
-\cventry{}{Dmitry Mikushin, Nikolay Likhogrud, Sergey Kovylov. KernelGen: A Prototype of Auto-parallelizing Fortran/C compiler for NVIDIA GPUs}{GPU Technology Conference 2013}{\href{http://registration.gputechconf.com/quicklink/fEoVwIQ}{available online}}{}{}}
+\cventry{}{Dmitry Mikushin, Nikolay Likhogrud, Sergey Kovylov. KernelGen: A Prototype of Auto-parallelizing Fortran/C compiler for NVIDIA GPUs}{HPC Advisory Council 2013}{\href{https://www.youtube.com/watch?v=VqUVcuTNbQ8}{available online}}{}{}}
 
 \section{Active skills}
 \cventry{CS/Research}{\small Explore new environments/software and teach others to use them, design \& perform experiments to analyse hardware/software properties and generalize findings into practically useful methods/tools}{}{}{}{}

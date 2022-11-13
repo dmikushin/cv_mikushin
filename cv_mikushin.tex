@@ -13,6 +13,25 @@
 \usepackage[utf8]{inputenc} % replace by the encoding you are using
 % adjust the page margins
 \usepackage[scale=0.86]{geometry}
+
+\usepackage[backend=bibtex]{biblatex}
+\addbibresource{cv_mikushin.bib}
+
+\defbibenvironment{bibliography}
+{\list
+{\printtext[labelnumberwidth]{% label format from numeric.bbx
+        \printfield{labelprefix}%
+        \printfield{labelnumber}}}
+{\setlength{\topsep}{0pt}% layout parameters from moderncvstyleclassic.sty
+    \setlength{\labelwidth}{\hintscolumnwidth}%
+    \setlength{\labelsep}{\separatorcolumnwidth}%
+    \leftmargin\labelwidth%
+    \advance\leftmargin\labelsep}%
+\sloppy\clubpenalty4000\widowpenalty4000}
+{\endlist}
+{\item}
+\renewcommand*{\bibnamedash}{\mbox{\textemdash\space}}%
+
 %\setlength{\hintscolumnwidth}{3cm} % if you want to change the width of the column with the dates
 %\AtBeginDocument{\setlength{\maketitlenamewidth}{6cm}} % only for the classic theme, if you want to change the width of your name placeholder (to leave more space for your address details
 \AtBeginDocument{\recomputelengths} % required when changes are made to page layout lengths
@@ -51,16 +70,16 @@ Group of Dr. Simon Scheidegger. Computing global solutions to annually calibrate
 \cventry{2006--2007}{Contractor}{Global Energy Problems Lab}{Moscow Energy Institute}{}{\footnotesize Implemented toolbox for Voronoi tesselation and regression analysis in C\#.}
 
 \section{Industrial experience}
-\cventry{2019--present}{Support engineer (part time)}{Luxoft Inc.}{}{Moscow}{\footnotesize 
+\cventry{2019--present}{Support engineer (part time)}{Luxoft, a DXC Technology Company}{}{}{\footnotesize 
 Emergency \& technical support for previously developed backpricing service (financial customer).}
-\cventry{2018--2019}{System Analyst (part time)}{REG.RU}{}{Moscow}{\footnotesize
+\cventry{2018--2019}{System Analyst (part time)}{REG.RU}{}{}{\footnotesize
 Overseeing the development of Cloud GPU services for scientific and industrial machine learning. Helping with internal GPU-based spin-off products.}
-\cventry{2017--2019}{Lead Technical Expert}{Luxoft Inc.}{}{Moscow}{\footnotesize 
-GPGPU for high-performance Monte-Carlo backpricing valuation (financial customer). Complete rewrite of Scala code into C++ \& CUDA, skip-ahead optimizations for Sobol RNG. Design and implementation of efficient GPU kernels for lidar simulation (automotive customer).}
+\cventry{2017--2019}{Lead Technical Expert}{Luxoft Inc.}{}{}{\footnotesize 
+GPGPU for high-performance Monte-Carlo backpricing valuation (financial customer). Complete rewrite of Scala code into C++ \& CUDA, skip-ahead optimizations for Sobol QRNG. Design and implementation of efficient GPU kernels for lidar simulation (automotive customer).}
 \cventry{2014--present}{Owner}{Applied Parallel Computing LLC (CUDA Education \& Research in EMEA)}{}{\url{http://parallel-computing.pro/}}{}
 %\cventry{2011--present}{Project lead}{{KernelGen} open-source compiler toolchain}{\url{http://kernelgen.org/}}{}{\footnotesize Design and development of LLVM-based compiler for identifying parallel loops in C/Fortran code and converting them into GPU kernels. Strategic planning, interacting with community, creating new partnerships.}{}
 \vskip 2pt
-\cventry{2011--2012}{CTO}{Applied Parallel Computing LLC (CUDA Education \& Research in EMEA)}{Dubna, Moscow Region, Russia}{\url{http://parallel-computing.pro/}}{\footnotesize Managing technological aspects in company's GPGPU training and software development business. Created course list on comprehensive CUDA training program, implemented original presentations and hands-ons, later used in CUDA 4.x Handbook in Russian. Served as trainer on events in Germany, Ireland and Russia. Organizing and reviewing work of 7 company's contracted trainers/developers. Responsible for interaction with customers and partners worldwide.}
+\cventry{2011--2012}{CTO}{Applied Parallel Computing LLC (CUDA Education \& Research in EMEA)}{}{\url{http://parallel-computing.pro/}}{\footnotesize Managing technological aspects in company's GPGPU training and software development business. Created course list on comprehensive CUDA training program, implemented original presentations and hands-ons, later used in CUDA 4.x Handbook in Russian. Served as trainer on events in Germany, Ireland and Russia. Organizing and reviewing work of 7 company's contracted trainers/developers. Responsible for interaction with customers and partners worldwide.}
 \vskip 2pt
 \cventry{2009--2011}{DevTech Engineer}{NVIDIA}{Moscow, Russia}{}{\footnotesize Ported parts of numerical weather prediction models onto GPUs: spectral solver benchmark (Russian Met Office), GPU kernels generator for COSMO model (Deutscher Wetterdienst et al). Supported customers and developers on CUDA programming in HPC applications, provided training sessions. PhysX game physics engine: implemented SPU-interacting radix sort for rigid bodies broad phase algorithm on Cell Broadband Engine processor (Sony PlayStation 3), made first experimental Tegra/ARM ports of PhysX engine, helped with Linux port.}
 
@@ -87,39 +106,8 @@ GPGPU for high-performance Monte-Carlo backpricing valuation (financial customer
 \cvline{supervisors}{Dr. Vasily N. Lykossov, Dr. Victor M. Stepanenko}
 \cvline{}{\footnotesize Implemented and analyzed Smolarkiewicz transport scheme, the positive-definite method of Lax–Wendroff class. Resulting source code was incorporated into regional non-hydrostatic model of atmosphere and boundary layer (NH3D) and used to trace passive aerosol. Experiments with real terrains showed significant numerical accuracy improvement both in mass conservation and approximation order over leapfrog and first order transport schemes.}
 
-\begin{thebibliography}{1}
-
-\bibitem{Jian_2020} Nianchuan Jian, Dmitry Mikushin, Jianguo Yan, Jean-Pierre Barriot, Yajun Wu and Guangli Wang.
-\newblock A {GPU}-based phase tracking method for planetary radio science applications.
-\newblock {\em IOP Measurement Science and Technology}, 31-4, 2020.
-
-\bibitem{IPDPS} Simon Scheidegger, Dmitry Mikushin, Felix Kubler, and Olaf Schenk.
-\newblock Rethinking large-scale economic modeling for efficiency: optimizations for GPU and Xeon Phi clusters.
-\newblock {\em IEEE IPDPS}, pp. 610-619, 2018.
-
-\bibitem{brumm2015scalable}
-Johannes Brumm, Dmitry Mikushin, Simon Scheidegger, and Olaf Schenk.
-\newblock Scalable high-dimensional dynamic stochastic economic modeling.
-\newblock {\em Journal of Computational Science}, 11:12--25, 2015.
-
-\bibitem{Mikushin:2014:KDI:2672598.2672916}
-Dmitry Mikushin, Nikolay Likhogrud, Eddy~Z. Zhang, and Christopher
-  Bergstr\"{o}m.
-\newblock Kernelgen -- the design and implementation of a next generation
-  compiler platform for accelerating numerical models on gpus.
-\newblock In {\em Proceedings of the 2014 IEEE International Parallel \&
-  Distributed Processing Symposium Workshops}, IPDPSW '14, pages 1011--1020,
-  Washington, DC, USA, 2014. IEEE Computer Society.
-
-\bibitem{PPAM}
-Dmitry Mikushin and Victor Stepanenko.
-\newblock The implementation of regional atmospheric model numerical algorithms
-  for {Cell} {Broadband} {Engine} {Architecture} -based clusters.
-\newblock In Roman Wyrzykowski, Jack Dongarra, Konrad Karczewski, and Jerzy
-  Wasniewski, editors, {\em PPAM (1)}, volume 6067 of {\em Lecture Notes in
-  Computer Science}, pages 525--534. Springer, 2009.
-
-\end{thebibliography}
+\nocite{*}
+\printbibliography[title={Publications}]
 
 \section{Selected talks}
 {\small
@@ -135,9 +123,8 @@ Dmitry Mikushin and Victor Stepanenko.
 \cventry{NWP}{\small Engineer-level experience with numerical weather prediction models: WRF-ARW, COSMO}{}{}{}{}
 
 \section{Teaching}
-\cventry{2014}{Parallel \& Distributed Computing Lab}{University of Lugano}{}{}{5 practical assignments on code porting, profiling \& optimization for TBB, MPI, CUDA, CellBE and Xeon Phi.}{}
 \cventry{2014}{Parallel \& Distributed Computing}{University of Lugano}{}{}{The fundamentals of concurrent execution. Threading in Java. The basics of OpenMP and MPI.}{}
-\cventry{2013}{Parallel \& Distributed Computing Lab}{University of Lugano}{}{}{Configuration \& deployment of scientific codes on modern GPU-enabled HPC facilities, by example of SWE tsunami simulation model and CSCS ``T\"odi'' cluster}{}
+\cventry{2013--2014}{Parallel \& Distributed Computing Lab}{University of Lugano}{}{}{Configuration \& deployment of scientific codes on modern GPU-enabled HPC facilities, by example of SWE tsunami simulation model and CSCS ``T\"odi'' cluster}{}
 
 \section{Languages}
 \cvlanguage{English}{\small fluent technical}{}

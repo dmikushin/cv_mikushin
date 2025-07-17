@@ -1,0 +1,337 @@
+
+\documentclass[a4paper]{moderncv}
+\moderncvtheme[blue]{classic} % or classic, casual, oldstyle
+\usepackage[T2A,T1]{fontenc} % T2A for Cyrillic, T1 for Western European
+\usepackage[utf8]{inputenc}
+\usepackage[scale=0.86]{geometry}
+\usepackage{comment} % For multi-line comments if needed
+
+
+% Inline bibliography using filecontents
+\begin{filecontents}[overwrite]{cv_publications.bib}
+@inbook{AIAA,
+  author = {Nishikawa, Hiroaki and Nakashima, Yoshitaka and Mikushin, Dmitry and Lee, Jeff},
+  title = {A Reduced-Memory Multicolor Gauss-Seidel Relaxation Scheme for Implicit Unstructured-Polyhedral-Grid CFD Solver on GPU},
+  year = {2025},
+  booktitle = {AIAA AVIATION 2025 Forum},
+  note = {(to appear)}
+}
+
+@inproceedings{mikushin2014kernelgen,
+  author = {Mikushin, Dmitry and Likhogrud, Nikolay and Zhang, Eddy Z and Bergström, Christopher},
+  title = {KernelGen--The Design and Implementation of a Next Generation Compiler Platform for Accelerating Numerical Models on GPUs},
+  year = {2014},
+  booktitle = {2014 IEEE International Parallel \& Distributed Processing Symposium Workshops},
+  pages = {1011--1020},
+  organization = {IEEE}
+}
+
+@inproceedings{kuzmin2017end,
+  author = {Kuzmin, Andrey and Mikushin, Dmitry and Lempitsky, Victor},
+  title = {End-to-end learning of cost-volume aggregation for real-time dense stereo},
+  year = {2017},
+  booktitle = {2017 IEEE 27th International Workshop on Machine Learning for Signal Processing (MLSP)},
+  pages = {1--6},
+  organization = {IEEE}
+}
+
+@article{brumm2015scalable,
+  author = {Brumm, Johannes and Mikushin, Dmitry and Scheidegger, Simon and Schenk, Olaf},
+  title = {Scalable high-dimensional dynamic stochastic economic modeling},
+  year = {2015},
+  journal = {Journal of Computational Science},
+  volume = {11},
+  pages = {12--25},
+  publisher = {Elsevier}
+}
+
+@inproceedings{scheidegger2018rethinking,
+  author = {Scheidegger, Simon and Mikushin, Dmitry and Kubler, Felix and Schenk, Olaf},
+  title = {Rethinking large-scale economic modeling for efficiency: Optimizations for gpu and xeon phi clusters},
+  year = {2018},
+  booktitle = {2018 IEEE International Parallel and Distributed Processing Symposium (IPDPS)},
+  pages = {610--619},
+  organization = {IEEE}
+}
+
+@misc{mikushin2012kernelgen,
+  author = {Mikushin, Dmitry and Likhogrud, Nicolas},
+  title = {KernelGen--a toolchain for automatic GPU-centric applications porting},
+  year = {2012}
+}
+
+@inproceedings{georgieva2023falkor,
+  author = {Georgieva Belorgey, Mariya and Dandjee, Sofia and Gama, Nicolas and Jetchev, Dimitar and Mikushin, Dmitry},
+  title = {Falkor: Federated Learning Secure Aggregation Powered by AESCTR GPU Implementation},
+  year = {2023},
+  booktitle = {Proceedings of the 11th Workshop on Encrypted Computing \& Applied Homomorphic Cryptography},
+  pages = {11--22}
+}
+
+@article{jian2020gpu,
+  author = {Jian, Nianchuan and Mikushin, Dmitry and Yan, Jianguo and Barriot, Jean-Pierre and Wu, Yajun and Wang, Guangli},
+  title = {A GPU-based phase tracking method for planetary radio science applications},
+  year = {2020},
+  journal = {Measurement Science and Technology},
+  volume = {31},
+  number = {4},
+  pages = {045902},
+  publisher = {IOP Publishing}
+}
+
+@inproceedings{nguyen2021hiq,
+  author = {Nguyen, Damien and Mikushin, Dmitry and Man-Hong, Yung},
+  title = {HiQ-ProjectQ: Towards user-friendly and high-performance quantum computing on GPUs},
+  year = {2021},
+  booktitle = {2021 Design, Automation \& Test in Europe Conference \& Exhibition (DATE)},
+  pages = {1056--1061},
+  organization = {IEEE}
+}
+
+@article{stepanenko2008numerical,
+  author = {Stepanenko, Victor and Mikushin, Dmitry},
+  title = {Numerical modeling of mezoscale dynamics in the atmosphere and tracer transport above hydrologically inhomogeneous land},
+  year = {2008},
+  journal = {Computational Technologies},
+  volume = {13},
+  number = {Special issue 3},
+  pages = {104--110}
+}
+
+@inproceedings{mikushin2010implementation,
+  author = {Mikushin, Dmitry and Stepanenko, Victor},
+  title = {The implementation of regional atmospheric model numerical algorithms for Cell Broadband Engine Architecture-based clusters},
+  year = {2010},
+  booktitle = {Parallel Processing and Applied Mathematics: 8th International Conference, PPAM 2009, Wroclaw, Poland, September 13-16, 2009. Revised Selected Papers, Part I 8},
+  pages = {525--534},
+  organization = {Springer Berlin Heidelberg}
+}
+
+@poster{ecem2019,
+  author = {Mikushin, Dmitry and Korotaev, Kirill and MacInnes, William Joseph},
+  title = {On coupling of EyeStalker algorithm with USB3.0 camera for affordable eye tracking},
+  year = {2019},
+  booktitle = {20th European Conference on Eye Movements},
+  pages = {392}
+}
+
+
+\end{filecontents}
+
+% BibLaTeX for bibliography
+\usepackage[backend=bibtex, style=numeric, sorting=ydnt, maxnames=999, minnames=999]{biblatex}
+% style=authoryear-comp, bibstyle=authoryear, citestyle=authoryear-comp are other options
+% sorting=nyt (name, year, title), ydnt (year (desc), name, title)
+\addbibresource{cv_publications.bib} % Bib file name
+
+% Define bib environment for moderncv compatibility
+\defbibenvironment{bibliography}
+{\list
+  {\printtext[labelnumberwidth]{% label format from numeric.bbx
+        \printfield{labelprefix}%
+        \printfield{labelnumber}}}
+  {\setlength{\labelwidth}{\hintscolumnwidth}%
+    \advance\leftmargin\labelsep}%
+  \sloppy\clubpenalty4000\widowpenalty4000}
+{\endlist}
+{\item}
+\renewcommand*{\bibnamedash}{\mbox{\textemdash\space}}% for repeated authors
+% Fix spacing between volume and number fields
+\DeclareFieldFormat[article]{volume}{#1}
+\DeclareFieldFormat[article]{number}{#1}
+\renewbibmacro*{volume+number+eid}{%
+  \printfield{volume}%
+  \setunit*{.\space}% Add space after period between volume and number
+  \printfield{number}%
+  \setunit{\addcomma\space}%
+  \printfield{eid}}
+
+\AtBeginDocument{\recomputelengths} % Recalculate lengths (important)
+
+% Personal Information
+\firstname{Dmitry}
+\familyname{Mikushin, PhD} % moderncv doesn't have a separate title command like this, it's part of familyname
+
+\address{1815 Clarens, Switzerland}{}{}
+\mobile{+41 78 925 90 90}
+\email{dmitry@kernelgen.org}
+\homepage{mikush.in}
+\social[github]{dmikushin}
+\social[linkedin]{dmikushin}
+\photo[64pt]{photo.jpg}
+
+\AfterPreamble{\hypersetup{colorlinks,urlcolor=blue}} % Make links blue
+
+\begin{document}
+\maketitle
+
+\textbf{Work authorization in Switzerland}: work permit B
+
+\section{PROFESSIONAL SUMMARY}
+
+I work at the intersection of research and industrial programming (C/C++, Fortran, Python), where classical supercomputing (MPI, OpenMP) meets modern hardware (GPUs, TPUs, embedded ASICs) and performance optimization.
+
+As co--founder of Purple Gaze Inc., I've developed eyetracking systems that are both more affordable and faster than many existing solutions.
+
+I've earned my PhD from the University of Lausanne, where I developed specialized supercomputing software for economics and finance applications.
+
+My expertise in CUDA, OpenCL, OpenACC, and Machine Learning has established me as an effective consultant in these fields.
+
+I provide effective GPU--accelerated solutions to organizations facing complex computational challenges. My skills help teams successfully port legacy algorithms to utilize NVIDIA H100/GH200 GPU architectures, implement memory--optimized algorithms for better compute--memory balance, and develop portable cross--platform solutions that work reliably across different computing environments.
+
+As a regular user of AI--assisted development tools, I incorporate LLMs into my daily workflow to improve productivity and solve technical challenges more efficiently.
+
+
+\section{KEY ACHIEVEMENTS}
+
+\begin{itemize}
+\item \textbf{GPU--Accelerated Algorithms Design}: Created and implemented numerous high--performance GPU algorithms in many domains: CFD, economics, computer vision, homomorphic encryption, self--driving simulators, and even radio astronomy
+\item \textbf{Cross--Platform Development}: Successfully ported multiple research and production software packages to diverse operating systems, architectures, and platforms
+\item \textbf{Research Impact}: Co--authored significant research papers and industrial presentations in high--performance computing and computer vision
+\item \textbf{Entrepreneurial Success}: Co--founded Purple Gaze Inc. and spearheaded development of the company's first ``Foxy'' eyetracking device
+\end{itemize}
+
+
+\section{CORE COMPETENCIES}
+
+\begin{itemize}
+\item \textbf{Technical Team Lead/CTO}: Proven ability to develop technical strategy for long--term projects, lead by example through technical excellence, and effectively direct mixed human/AI teams
+\end{itemize}
+
+\begin{itemize}
+\item \textbf{HPC/Engineering}: Mastery of the complete development \& support cycle for HPC applications on Linux clusters: programming, multi--architecture parallelization, debugging, and performance optimization. Experienced with large--scale codebases including MSC Nastran, PyTorch, and MIOpen.
+\end{itemize}
+
+\begin{itemize}
+\item \textbf{GPU Acceleration Expert}: Specialized in memory footprint optimization for large--scale simulations, legacy solver migration to NVIDIA H100/GH200 GPUs, and implementation of highly optimized algorithms for superior compute--memory balance.
+\end{itemize}
+
+\begin{itemize}
+\item \textbf{Research \& Development}: Skilled at exploring new technologies and transferring that knowledge to others, designing comprehensive experiments to analyze hardware/software performance, and translating findings into practical methods and tools.
+\end{itemize}
+
+\begin{itemize}
+\item \textbf{AI--Enhanced Development}: Daily practitioner of LLM--assisted coding workflows, leveraging AI tools (shell\_gpt, VSCode Agent) to streamline development, troubleshoot complex code, and overcome technical obstacles.
+\end{itemize}
+
+\begin{itemize}
+\item \textbf{Embedded SW/HW}: Developer of specialized embedded machine vision systems. Designed and implemented Linux firmware and real--time processing services for resource--constrained ARM processors (eyetracking), with expertise in real--time device--host communication.
+\end{itemize}
+
+\begin{itemize}
+\item \textbf{Compilers Development}: Deep understanding of compiler internals with contributions to LLVM. Creator of KernelGen -- an innovative auto--parallelizing Fortran/C compiler for NVIDIA GPUs.
+\end{itemize}
+
+
+\section{TECHNICAL SKILLS}
+
+\begin{itemize}
+\item \textbf{Programming Languages}: C/C++, CUDA/HIP/OpenCL, Fortran, Python, Perl, Bash; an active learner of Rust
+\item \textbf{Development Tools}: CMake/make, git, gdb, vim, tmux
+\item \textbf{AI Tools}: shell\_gpt, ollama, gguf, VSCode agent
+\item \textbf{High Performance Computing}: GPU acceleration, OpenMP (multicore and GPU offload), MPI, algorithm optimization
+\item \textbf{GPU Expertise}: NVIDIA H100/GH200, Parallel Programming, Memory optimization, Performance tuning, Kepler/Volta assembler
+\item \textbf{CFD \& Numerical Methods}: Unstructured solvers, Gauss--Seidel methods, Fréchet derivatives, Memory reduction techniques
+\item \textbf{Compiler Development}: LLVM contributions, Clang/LLVM plugins developer
+\item \textbf{Embedded Systems}: UART, U--boot, WiringPi, ADBD, Allwinner, Rockchip, ATTiny85, Cypress FX3, uvc/genicam camera vision
+\item \textbf{Cloud Technologies}: Docker, Singularity, ssh
+\item \textbf{Operating Systems}: Linux, FreeBSD
+\item \textbf{Hardware}: Electronics prototyping, soldering, circuit checking, milling machine operation
+\end{itemize}
+
+
+\section{PROFESSIONAL EXPERIENCE}
+\cventry{2019--present}{Co--Founder \& CTO}{Purple Gaze Inc.}{Lausanne Area, Switzerland}{}{\footnotesize \begin{itemize}
+\item Developed research--quality high--performance eyetracking hardware and software stack
+\item Created company's first 'Foxy' eyetracking device product
+\item Lead development of high--precision embedded systems for eyetracking and machine vision
+\item Direct technical strategy and engineering team in creating cutting--edge vision technologies
+\end{itemize}}
+\vskip 2pt
+\cventry{2023--2025}{Senior Software Engineer}{Hexagon Manufacturing Intelligence}{Renens, Vaud, Switzerland (Remote)}{}{\footnotesize \begin{itemize}
+\item Implemented GPU support for Cradle CFD and MSC Nastran simulation software on NVIDIA platforms
+\item Led development of GPU--accelerated unstructured CFD solver that achieved 15\% performance improvement on a single NVIDIA H100 GPU compared to 384 CPU threads on 4× AMD EPYC 7763 CPUs
+\item Developed reduced--memory multicolor Gauss--Seidel method using Fréchet derivative, achieving 45\% memory reduction
+\item Implemented GH200 support by porting code to ARM64 with Clang
+\item Created portable OpenMP code for both multicore and GPU offload scenarios
+\item Presented research and achievements at NVIDIA GPU Technology Conference (GTC) 2025
+\end{itemize}}
+\vskip 2pt
+\cventry{2022--2023}{HIP/C++ Developer (Contractor)}{AMD}{Zug, Switzerland (Remote)}{}{\footnotesize \begin{itemize}
+\item Developed GPU optimizations for MIOpen machine learning engine
+\item Enhanced performance of machine learning frameworks through advanced C++ and CUDA implementations
+\item Collaborated with cross--functional teams to improve AMD's GPU computing capabilities
+\end{itemize}}
+\vskip 2pt
+\cventry{2019--2023}{Research Assistant}{University of Lausanne (UNIL)}{Lausanne Area, Switzerland}{}{\footnotesize \begin{itemize}
+\item Conducted research in GPU computing applications
+\item Collaborated with academic teams on parallel computing projects
+\end{itemize}}
+\vskip 2pt
+\cventry{2018--2019}{CUDA/C++ Developer}{Valeo}{Remote}{}{\footnotesize \begin{itemize}
+\item Designed and implemented efficient GPU kernels for self--driving car lidar simulation (ADAS)
+\item Optimized performance for real--time processing requirements
+\item Contributed to autonomous vehicle technology development
+\end{itemize}}
+\vskip 2pt
+\cventry{2017--2018}{CUDA/C++ Developer}{Excellian}{Remote}{}{\footnotesize \begin{itemize}
+\item Implemented GPGPU for high--performance Monte--Carlo backpricing valuation for financial customers
+\item Completely rewrote Scala code into C++ \& CUDA with skip--ahead optimizations for Sobol QRNG
+\item Prepared backend for integration with Murex financial platform
+\end{itemize}}
+\vskip 2pt
+\cventry{2015--2019}{Assistant}{University of Zurich}{Zürich Area, Switzerland}{}{\footnotesize \begin{itemize}
+\item Applied GPGPU techniques for computational economics in Dr. Simon Scheidegger's research team
+\item Contributed to academic research bridging high--performance computing and economic modeling
+\item Supported teaching and research activities in parallel computing
+\end{itemize}}
+\vskip 2pt
+\cventry{2014--present}{Owner / CUDA Educator \& Researcher}{Applied Parallel Computing LLC}{Montreux, Vaud, Switzerland}{}{\footnotesize \begin{itemize}
+\item Created original courses in GPU computing, CUDA, OpenACC and related technologies
+\item Organized and led a small team of consultants for EMEA region
+\item Provided specialized training in NVIDIA and AMD GPU computing technologies to German automotive industry clients and universities
+\item Consulted customers in industry and academia on--site
+\item Expertise in CUDA and HIP frameworks for high--performance computing
+\end{itemize}}
+\vskip 2pt
+\cventry{2012--2016}{Doctoral Assistant}{USI Università della Svizzera italiana}{Lugano, Switzerland}{}{\footnotesize \begin{itemize}
+\item Taught Master--level courses in computer science
+\item Conducted doctoral research in parallel computing
+\item Supported academic programs through teaching and research assistance
+\end{itemize}}
+\vskip 2pt
+\cventry{2013--2013}{Visiting Scholar}{Rutgers University}{New Brunswick, New Jersey}{}{\footnotesize \begin{itemize}
+\item Assisted research activities of Prof. Eddy Zheng Zhang
+\item Contributed to academic research in parallel computing and GPU applications
+\item Collaborated with international research teams on advanced computing projects
+\end{itemize}}
+\vskip 2pt
+\cventry{2011--2012}{Technical Lead}{Applied Parallel Computing LLC}{Dubna, Moscow Region}{}{\footnotesize \begin{itemize}
+\item Led company's GPGPU R\&D projects and training services
+\item Directed technical teams in developing parallel computing solutions
+\item Managed client relationships for technical training programs
+\end{itemize}}
+\vskip 2pt
+\cventry{2009--2011}{Developer Technology Engineer}{NVIDIA}{Moscow, Russian Federation}{}{\footnotesize \begin{itemize}
+\item Developed GPU spectral solver benchmark and GPU kernels generator for COSMO model (Deutscher Wetterdienst)
+\item Implemented SPU--interacting radix sort for rigid bodies broad phase algorithm on Cell Broadband Engine processor (Sony PlayStation 3)
+\item Created proof--of--concept Multi--GPU applications to demonstrate hardware benefits to customers
+\item Contributed to PhysX engine Linux port and developed experimental Tegra/ARM ports
+\item Provided CUDA/HPC customer support and training sessions
+\end{itemize}}
+\vskip 2pt
+\section{EDUCATION}
+\cventry{2019--2023}{Doctor of Philosophy (PhD) in Business Analytics}{University of Lausanne (UNIL)}{Lausanne, Switzerland}{}{Dissertation: High--performance computing approaches to solve large--scale dynamic models in economics and finance\\ Focus areas: Dynamic programming, Compilers, C++, Combinatorics, GPGPU, High Performance Computing (HPC)}
+\vskip 2pt
+\cventry{2003--2008}{MSc in Computational Mathematics and System Programming}{Lomonosov Moscow State University (MSU)}{Moscow, Russia}{}{Department: Department of Computational Technologies and Modelling (Institute of Numerical Mathematics, Russian Academy of Science)}
+\vskip 2pt
+\section{PUBLICATIONS}
+% Publications are managed via bibliography
+% Use \nocite{*} to include all references, or \nocite{key1,key2,...} for specific ones
+\nocite{AIAA,mikushin2014kernelgen,kuzmin2017end,brumm2015scalable,scheidegger2018rethinking,mikushin2012kernelgen,georgieva2023falkor,jian2020gpu,nguyen2021hiq,stepanenko2008numerical,mikushin2010implementation,ecem2019}
+ % This will contain \section{...} \cventry{...} etc.
+
+% Print bibliography if there are publications
+\printbibliography[heading=none]
+
+\end{document}
